@@ -7,7 +7,10 @@
 
 ## 预览
 
-### 推荐主页：
+### 主页推荐：
 
 ![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/1.gif)
+
+### 主页分类
+![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/2.gif)
 

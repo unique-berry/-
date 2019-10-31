@@ -8,5 +8,5 @@
 ###预览
 
 * `推荐主页 `
-![image](https://github.com/wwdc14/OpenEyesDemo/blob/master/Resources/开眼-下拉刷新.gif)
+![image](http://i.caigoubao.cc/621335/jianli/github/OpenEye/1.gif)
 

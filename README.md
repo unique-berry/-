@@ -8,5 +8,5 @@
 ###预览
 
 * `推荐主页 `
-![image](http://i.caigoubao.cc/621335/jianli/github/OpenEye/1.gif)
+![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/1.gif)
 

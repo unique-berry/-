@@ -15,5 +15,11 @@
 ![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/2.gif)
 
 ### 主页搜索
-![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/3.gif)
+![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/3a.gif)
+
+### 播放页面
+![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/4.gif)
+
+### 收藏页面  
+##### (ps:因为开眼接口的限制，无法获取人户信息，无法实现用户界面,所以只能利用本地存储特性简单模拟了一下收藏和浏览记录的功能)
 

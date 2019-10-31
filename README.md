@@ -7,6 +7,6 @@
 
 ###预览
 
-* `推荐主页 `
+##推荐主页
 ![Image text](http://i.caigoubao.cc/621335/jianli/github/OpenEye/1.gif)
 

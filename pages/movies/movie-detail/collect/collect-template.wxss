@@ -1,0 +1,15 @@
+.collect_icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.collect-wrap{
+  display: flex;
+  flex-direction: row;
+}
+.collect-num{
+  font-size: 25rpx;
+  color:#cdccda;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-left: 15rpx;
+}

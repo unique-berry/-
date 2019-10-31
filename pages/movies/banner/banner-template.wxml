@@ -1,0 +1,10 @@
+<import src="../author/author-template.wxml"/>
+<template name="BannerTemplate">
+  <view class='banner-wrap'>
+      <image class='movies_img' src="{{item.pic_url}}" bindtap='toMovieDetail' data-movieImg="{{item.pic_url}}" data-playUrl="{{item.playUrl}}" data-title="{{item.movieName}}" data-movieType="{{item.movieType}}" data-description="{{item.description}}" data-movieId="{{item.movieId}}" data-cover="{{item.cover}}" data-collect="{{item.collect}}" data-share="{{item.share}}" data-comment="{{item.comment}}" data-duration="{{item.duration}}"></image>
+      <view class='time'>{{item.duration}}</view>  
+      <view class="movies-author-wrap">
+        <template is="AuthorTemplate" data="{{item}}"/>
+      </view>
+  </view>
+</template>

@@ -1,0 +1,16 @@
+<import src="../collect/collect-template.wxml"/>
+<import src="../share/share-template.wxml"/>
+<import src="../evaluate/evaluate-template.wxml"/>
+<template name="infoTemplate">
+  <view class='info-wrap'>
+    <view class='info-title'>{{detail.title}}</view>
+    <view class='info-type'>#{{detail.movieType}} / 开眼精选</view>
+    <view class="info-description">{{detail.description}}</view>
+    <view class='operation-wrap'>
+    <template is="collectTemplate" data="{{detail}}"/>
+    <template is="shareTemplate" data="{{detail}}"/>
+    <template is="evaluateTemplate" data="{{detail}}"/>
+  </view>
+  </view>
+  <view class="wire"></view>
+</template>

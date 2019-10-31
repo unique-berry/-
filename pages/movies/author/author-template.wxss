@@ -1,0 +1,35 @@
+.author{
+  width: 100%;
+  border-radius: 15rpx;
+  position: relative;
+  margin:auto;
+}
+.author_img{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  border:1px solid #f2f2f2;
+}
+.author_text{
+  position: absolute;
+  top:0;
+  left: 100rpx;
+}
+
+.selection_slogan{
+  font-size: 32rpx;
+  font-weight: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 613rpx;
+  overflow: hidden;
+  color: #464646;
+}
+.selection_title{
+  font-size: 28rpx;
+  color: #acacac;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

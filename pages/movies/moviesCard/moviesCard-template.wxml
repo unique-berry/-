@@ -1,0 +1,13 @@
+<template name="moviesCardTemplate">
+  <view class='moviesCard-content'>
+    <image class='moviesCard-img' src="{{item.pic_url}}" bindtap='toMovieDetail' data-movieImg="{{item.pic_url}}" data-playUrl="{{item.playUrl}}" data-title="{{item.title}}" data-movieType="{{item.movieType}}" data-description="{{item.description}}"data-movieId="{{item.movieId}}" data-cover="{{item.cover}}"  data-collect="{{item.collect}}" data-share="{{item.share}}" data-comment="{{item.comment}}" data-duration="{{item.duration}}" data-videoTime="{{item.videoTime}}"></image>
+    <view class='moviesCard-time'>{{item.duration}}</view>
+    <view class='moviesCard-text'>
+      <view class='moviesCard-title'>{{item.title}}</view>
+      <view class='moviesCard-type-warp'>
+        <view class='moviesCard-type'>#{{item.movieType}}</view>
+        <view class='moviesCard-date'>{{item.NowTime}}</view>
+      </view>
+    </view>
+  </view>
+</template>

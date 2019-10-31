@@ -1,0 +1,52 @@
+<!--pages/movies/movie-detail/movie-detail.wxml-->
+<import src="./info/info-template.wxml"/>
+<import src="../moviesCard/moviesCard-template.wxml"/>
+<import src="./personComment/personComment-template.wxml"/>
+<view class="movieDetail-content" >
+  <view class='bg1'style="background:url({{detail.cover}});background-size:cover;background-position:center center;height:{{height}}"></view>
+  <view class='bg' style="height:{{height}}"></view>
+  <view class='playbackRate' bindtap='bindSpeed' wx:if="{{playbackRate}}">
+    <image src='../../../images/icon/speed.png'></image>
+    <view class='speed_num'>{{speedNum}}</view>
+  </view>
+  <view class='speed_list' wx:if="{{speedShow}}">
+    <view bindtap='bindSpeednum' data-SpeedNum="0.5">0.5</view>
+    <view bindtap='bindSpeednum' data-SpeedNum="0.8">0.8</view>
+    <view bindtap='bindSpeednum' data-SpeedNum="1.0">1.0</view>
+    <view bindtap='bindSpeednum' data-SpeedNum="1.25">1.25</view>
+    <view bindtap='bindSpeednum' data-SpeedNum="1.5">1.5</view>
+  </view>
+  <video src="{{detail.playUrl}}" class='video' controls="true"  show-mute-btn="true" poster="{{detail.movieImg}}" id='myVideo'  title="{{detail.title}}" bindwaiting="bindwaiting" bindplay="bindplay"  custom-cache="{{false}}" bindtimeupdate="bindtimeupdate" binderror="binderror" bindtap='bindvidetap'>
+  </video>
+  <scroll-view scroll-y="true" style="height:{{heightScroll}};">
+    <view>
+      <template is="infoTemplate" data="{{detail}}"/>
+      <view class="recommend">相关推荐</view>
+      <view class='blank' hidden='{{blank}}'>
+        <image src="../../../images/load.gif" class='load'></image>
+      </view>
+      <block wx:for="{{movies}}" wx:key="index">
+            <template is="moviesCardTemplate" data="{{item}}"/>
+      </block>
+      <image src="http://static.kaiyanapp.com/eyepetizer-web/assets/images/detail/bottom_logo@3x.556cae6b.png" class='end'></image>
+    </view>
+  </scroll-view>
+  <view class="detail-comment" style='display:block; height:{{heightcomment}};top:{{height}};' animation="{{movie}}" wx-if="{{commentSwitch}}">
+    <view class='bg1'style="background:url({{detail.cover}});background-size:cover;background-position:center center;height:{{heightcomment}}"></view>
+    <view class='bg' style="height:{{heightcomment}}"></view>
+    <view class='comment-wrap'>
+      <view class='comment-title'>最新热评</view>
+      <view class='comment-black-wrap' bindtap='commentBlack'>
+        <image src="/images/icon/black.png" class='comment-black' ></image>
+      </view>
+    </view>
+    <scroll-view scroll-y="true" style="height:{{commentScroll}};">
+      <image src="/images/load.gif" class='comment-load' hidden='{{commentUserInfo}}'></image>
+      <view hidden='{{commentUserInfo[0]}}' class='comment-tishi'>{{commentMain}}</view>
+      <block wx:for="{{commentUserInfo}}" wx:key="index" wx:if="{{commentUserInfo}}">
+      <template is="personCommentTemplate" data="{{item}}" hidden='{{commentUserInfo}}'/>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- <view class='bottom'></view> -->
+</view>

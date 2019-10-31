@@ -1,0 +1,9 @@
+<template name="AuthorTemplate">
+  <view class='author'>
+    <image class='author_img'  src="{{item.author_img}}"></image>
+    <view class='author_text'>
+      <view class='selection_slogan'>{{item.movieName}}</view>
+      <view class=' selection_title'>{{item.slogan}}</view>
+    </view>
+  </view>
+</template>

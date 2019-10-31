@@ -1,0 +1,8 @@
+<template name="shareTemplate">
+  <view class='share1-wrap'>
+    <image src="/images/icon/share1.png" class='share1_icon'></image>
+    <view class='share1-num'>{{detail.consumption.share}}
+      <button open-type='share' class='share'></button>
+    </view>
+  </view>
+</template>  

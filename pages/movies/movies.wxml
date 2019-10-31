@@ -1,0 +1,122 @@
+<import src="movie-list/movie-list-template.wxml" />
+<import src="banner/banner-template.wxml" />
+<import src="type/type-template.wxml" />
+<view class='bg' style='height:{{height}}' hidden='{{true}}'>
+  <image class='bg-image' style='height:{{height}}' src="http://static.kaiyanapp.com/eyepetizer-web/assets/images/index/home_bk_4.c268348d.jpg"></image>
+  <view class='container_bg' style='height:{{height}}'></view>
+  <view class='logo'></view>
+  <view class='intro'></view>
+  <image src="../../images/load.gif" class='bg-load' hidden="{{movies[0]}}"></image>
+  <view class='main-btn' wx-if="{{movies[0]}}" bindtap='start'>点击进入</view>
+  <view class='hint'>{{network}}
+  </view>
+  <view class='server-hint'>{{serverHint}}
+  </view>
+</view>
+<scroll-view class='container' scroll-x="false" scroll-y="true" bindscrolltolower="onScrollLower"  style="height:{{height}}" wx-if='{{true}}' bindscroll="bindscroll">
+  <view class='nav-bg'></view>
+  <view class='nav'>
+    <view class='nav-center'>
+      <view style="color:{{typeActive}};" bindtap='bindType'>分类</view>
+      <view style="color:{{recommendActive}};" bindtap='bindRecommend'>推荐</view>
+      <view style="color:{{dateActive}};" bindtap='bindDate'>日报</view>
+    </view>
+    <image src="/images/icon/search.png" class='search' ></image>
+    <view class='search_btn' bindtap='bindseach'></view>
+  </view>
+  <view class="banner-title" wx-if="{{movies[0]}}">今日推荐</view>
+  <view hidden='{{recommendHidden}}'>
+    <swiper catchtap='onSwiperTap' autoplay="true" circular="true" interval="3000" wx-if="{{movies[0]}}" >
+      <block wx:for="{{movies}}" wx:key="index">
+        <swiper-item >
+          <template is="BannerTemplate" data="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <template is="movieListTemplate" data="{{...hot}}"/>
+    <view hidden='{{hide[0]}}'>
+    <template is="movieListTemplate" data="{{...music}}"/>
+    </view>
+    <view hidden='{{hide[1]}}'>
+    <template is="movieListTemplate" data="{{...advertising}}"/>
+    </view>
+    <view hidden='{{hide[2]}}'>
+    <template is="movieListTemplate" data="{{...fashion}}"/>
+    </view>
+    <view hidden='{{hide[3]}}'>
+    <template is="movieListTemplate" data="{{...cartoon}}"/>
+    </view>
+    <view hidden='{{hide[4]}}'>
+    <template is="movieListTemplate" data="{{...science}}"/>
+    </view>
+    <view hidden='{{hide[5]}}'>
+    <template is="movieListTemplate" data="{{...travel}}"/>
+    </view>
+    <view hidden='{{hide[6]}}'>
+    <template is="movieListTemplate" data="{{...food}}"/>
+    </view>
+    <view hidden='{{hide[7]}}'>
+    <template is="movieListTemplate" data="{{...life}}"/>
+    </view>
+    <view hidden='{{hide[8]}}'>
+    <template is="movieListTemplate" data="{{...pet}}"/>
+    </view>
+    <view hidden='{{hide[9]}}'>
+    <template is="movieListTemplate" data="{{...game}}"/>
+    </view>
+    <view hidden='{{hide[10]}}'>
+    <template is="movieListTemplate" data="{{...advanceNotice}}"/>
+    </view>
+    <view hidden='{{hide[11]}}'>
+    <template is="movieListTemplate" data="{{...record}}"/>
+    <image src="http://content.altfonts.com:88/img/T/H/The-End.png" class='end'></image>
+    </view>
+  </view>
+  <view class='type-box' hidden='{{typeBoxHidden}}'>
+    <block wx:for="{{typeData}}" wx:key="index">
+      <template is="typeTemplate" data="{{item}}"/>
+    </block>
+    <image src="/images/load.gif" class='search-load' hidden='{{searchLoadHidden}}'></image>
+    <image src="http://content.altfonts.com:88/img/T/H/The-End.png" class='end' wx:if="{{typeData[0]}}"></image>
+  </view>
+</scroll-view>
+<view class='search_box' style='height:{{height}};top:{{top}};background-size:cover;background-position:center center;' animation="{{movie}}">
+  <view class='search-wrap'>
+    <view class='search-input-wrap'>
+      <input class='search-vaule' type='text' placeholder='视频搜索、关键字搜索' placeholder-style=' color: #b2b2b2; font-size:24rpx;'value="{{inputValue}}" confirm-type="search" bindfocus="bindfocus" bindconfirm="bindblur"></input>
+      <view class='search-close' bindtap='searchBlack'>取消</view>
+    </view>
+    <scroll-view scroll-x="false" scroll-y="true" style="height:550px" bindscrolltolower="bindScrollSearch">
+      <view hidden='{{searchstart}}'>
+        <view class='search-history'>
+          <view style="font-weight:bold">搜索历史</view>
+          <view class='history-cancel' bindtap='bindCancel'>删除</view>
+        </view>
+        <view class='history-wrap' bindtap="bindHistory">
+          <block wx:for="{{history}}" wx:key="index">
+            <view data-history="{{item}}">{{item}}</view>
+          </block>
+        </view>
+        <view class='hot-search-wrap'>
+            <view style="font-weight:bold">热门标签</view>
+        </view>
+        <view class='history-wrap' bindtap="bindHistory">
+          <block wx:for="{{hotSearch}}" wx:key="index">
+            <view data-history="{{item}}">{{item}}</view>
+          </block>
+        </view>
+      </view>
+      <view class='searchMessage' wx:if="{{searchMessage[0]}}">
+        <view class='search_list'>视频</view>
+        <block wx:for="{{searchMessage}}" wx:key="index">
+          <template is="BannerTemplate" data="{{item}}"/> 
+        </block>
+      </view>
+      <image src="/images/load.gif" class='search-load' hidden='{{searchLoadHidden}}'></image>
+      <view class="noSearchMessage" hidden='{{noSearchMessage}}'>
+        <view class='noSearchMessage-title'>很抱歉没有搜索结果</view>
+        <view class='noSearchMessage-text'>可以通过所属分类、标题、关键词查找</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

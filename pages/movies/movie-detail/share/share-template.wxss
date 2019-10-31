@@ -1,0 +1,25 @@
+.share1_icon{
+  width: 35rpx;
+  height: 35rpx;
+}
+.share1-wrap{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.share1-num{
+  font-size: 25rpx;
+  color:#cdccda;
+  height: 35rpx;
+  line-height: 35rpx;
+  margin-left: 15rpx;
+  position: relative;
+}
+.share{
+  position: absolute;
+  top:-4rpx;
+  left:-52rpx;
+  width:100rpx;
+  height:46rpx;
+  opacity: 0;
+}

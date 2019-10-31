@@ -1,0 +1,23 @@
+<template name="personCommentTemplate">
+  <view class='personComment-wrap'>
+    <image class='avatar' src="{{item.avatar}}"></image>
+    <view class='user-info-wrap'>
+      <view class='NameLike'>
+        <view class='userName'>{{item.nickName}}</view>
+        <view class='likeCount'>
+          <view class='num'>{{item.likeCount}}</view>
+          <image src="/images/icon/support.png" class='support'></image>
+        </view>
+      </view>
+      <view class='message'>{{item.message}}</view>
+      <view class='user-fun'>
+        <view class='reply'>回复</view>
+        <view class='timeJub'>
+          <view class='time'>{{item.time}}</view>
+          <view class='jub'>...</view>
+        </view>
+      </view> 
+      <view class='comment-blank'></view>
+    </view>
+  </view>
+</template>

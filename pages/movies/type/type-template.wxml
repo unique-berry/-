@@ -1,0 +1,6 @@
+<template name="typeTemplate">
+  <view class='typeWarp' catchtap='onMoreTap' data-category="{{item.name}}">
+    <image src="{{item.bgPicture}}" class='type-image' ></image>
+    <view class='type-text'>#{{item.name}}</view>
+  </view>
+</template>

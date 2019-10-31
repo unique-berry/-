@@ -1,0 +1,6 @@
+<template name="collectTemplate">
+  <view class='collect-wrap' bindtap='onClickCollect'>
+    <image src="{{detail.CollentPng}}" class='collect_icon'></image>
+    <view class='collect-num'>{{detail.consumption.collect}}</view>
+  </view>
+</template>  

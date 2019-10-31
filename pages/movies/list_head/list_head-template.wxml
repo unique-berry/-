@@ -1,0 +1,7 @@
+<import src="../author/author-template.wxml"/>
+<template name="ListHeadTemplate">
+ <view class='ListHeadContent'>
+    <image class="ListHead-img" src="http://img.kaiyanapp.com/4e9b07cf92aa07519541fcf67cb39963.jpeg?imageMogr2/quality/60/format/jpg"></image>
+    <template is="AuthorTemplate"/>
+ </view>
+</template>  

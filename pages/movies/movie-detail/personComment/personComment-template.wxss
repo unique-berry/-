@@ -1,0 +1,90 @@
+.personComment-wrap{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-left:5%;
+  justify-content: space-between;
+  margin-top: 35rpx;
+}
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.user-info-wrap{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  border-bottom: 0.5rpx solid #cdccda;
+}
+.NameLike{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.userName{
+  font-size: 25rpx;
+  font-weight: bold;
+  color: #eee;
+  line-height: 40rpx;
+}
+.likeCount{
+  display: flex;
+  flex-direction: row;
+  line-height: 40rpx;
+  color: #cdccda;
+  font-size: 25rpx;
+}
+.num{
+  margin-right: 15rpx;
+}
+.support{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 40rpx;
+}
+.message{
+  font-size: 24rpx;
+  color: #cdccda;
+  margin-top: 25rpx;
+  text-align: justify;
+}
+.user-fun{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+
+}
+.reply{
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #cdccda;
+}
+.timeJub{
+  height: 40rpx;
+  line-break: 40rpx;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.time{
+  font-size: 24rpx;
+  color: #cdccda;
+}
+.jub{
+  font-size: 50rpx;
+  color: #cdccda;
+  line-height: 19rpx;
+  
+}
+.comment-blank{
+  width: 100%;
+  height: 40rpx;
+}

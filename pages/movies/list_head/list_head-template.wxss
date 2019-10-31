@@ -1,0 +1,22 @@
+.ListHeadContent{
+  width: 95%;
+  padding: 2.5%;
+}
+.ListHead-img{
+  width: 100%;
+  /* margin-left: 2.5%; */
+  border-radius: 15rpx;
+}
+.ListHead-author{
+  margin-top: 20rpx;
+  display:flex;
+  flex-direction: row;
+}
+.ListHead-authorImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.ListHead-detail{
+  margin-left: 20rpx;
+}

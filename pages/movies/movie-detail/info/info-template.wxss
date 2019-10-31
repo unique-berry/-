@@ -1,0 +1,47 @@
+/* pages/movies/movie-detail/info/info-template.wxss */
+@import "../collect/collect-template.wxss";
+@import "../share/share-template.wxss";
+@import "../evaluate/evaluate-template.wxss";
+.info-wrap{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #faf9fe;
+  width:95%;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  z-index: 100;
+}
+
+.info-title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.info-type{
+  margin-top:15rpx;
+  font-size: 22rpx;
+  color:#cdccda;
+}
+.info-description{
+  margin-top:20rpx; 
+  font-size: 25rpx;
+  color:#cdccda;
+  text-align: justify;
+}
+.wire{
+  position: relative;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 1px;
+  background: #cdccda;
+  z-index: 100;
+}
+.operation-wrap{
+  margin-top: 25rpx;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 40rpx;
+  line-height: 40rpx;
+  justify-content: space-between;
+}

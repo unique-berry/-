@@ -1,0 +1,17 @@
+.typeWarp{
+  width: 49.5%;
+  height: 380rpx;
+  margin-top: 10rpx;
+}
+.type-image{
+  width: 100%;
+  height: 380rpx;
+}
+.type-text{
+  position: relative;
+  top: -200rpx;
+  width:100%;
+  color: #fff;
+  text-align: center;
+  float: left;
+}

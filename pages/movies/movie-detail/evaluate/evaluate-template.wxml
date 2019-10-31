@@ -1,0 +1,6 @@
+<template name="evaluateTemplate">
+  <view class='evaluate-wrap' data-movieId="{{detail.movieId}}" data-comment="{{detail.consumption.comment}}" bindtap="getComment">
+    <image src="/images/icon/evaluate.png" class='evaluate_icon'></image>
+    <view class='evaluate-num'>{{detail.consumption.comment}}</view>
+  </view>
+</template>  

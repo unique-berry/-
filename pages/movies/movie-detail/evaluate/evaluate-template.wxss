@@ -1,0 +1,15 @@
+.evaluate_icon{
+  width:35rpx;
+  height: 35rpx;
+}
+.evaluate-wrap{
+  display: flex;
+  flex-direction: row;
+}
+.evaluate-num{
+  font-size: 25rpx;
+  color:#cdccda;
+  height: 35rpx;
+  line-height: 35rpx;
+  margin-left: 15rpx;
+}

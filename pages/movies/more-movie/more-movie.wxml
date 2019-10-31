@@ -1,0 +1,9 @@
+<import src="../banner/banner-template.wxml" />
+<scroll-view scroll-y="true" scroll-y="false" bindscrolltolower="onScrollLower" class="grid-container" style='height:{{height}}'>
+  <view>
+    <block wx:for="{{movies}}" wx:key="index">
+      <template is="BannerTemplate" data="{{item}}" />
+    </block>
+    <image src="/images/load.gif" class='moreMovieLoad' hidden='{{moreMovieLoad}}'></image>
+  </view>
+</scroll-view>

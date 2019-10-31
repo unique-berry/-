@@ -1,0 +1,15 @@
+/* pages/movies/more-movie/more-movie.wxss */
+@import "../banner/banner-template.wxss";
+.grid-container{
+  height: 700rpx;
+}
+.moreMovieLoad{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0rpx;
+  bottom: 0;
+  margin: auto;
+  width: 50rpx;
+  height: 50rpx;
+}

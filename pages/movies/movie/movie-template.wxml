@@ -1,0 +1,9 @@
+<import src="../banner/banner-template.wxml"/>
+<template name= "movieTemplate">
+  <view class='movie-container'>
+      <block wx:for="{{movies.first}}" wx:key="index">
+      <template is="BannerTemplate" data="{{item}}"/>
+      </block>        
+      <view>{{}}</view>
+  </view>
+</template>

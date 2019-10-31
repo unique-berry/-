@@ -1,0 +1,30 @@
+<!--pages/person/person.wxml-->
+<import src="../movies/moviesCard/moviesCard-template.wxml"/>
+<view class='person_wrapper' style='height:{{ClientHeight}};background:url({{likeData[0].cover}});background-size:cover;background-position:center center;'>
+  <view class='person_bg' ></view>
+  <image src="{{src}}" class='wx'></image>
+  <view class='person_hint'>{{person_hint}}</view>
+  <view hidden='{{accredit}}'>
+    <button open-type="getUserInfo" class='btn'  bindgetuserinfo='bindGetUserInfo' />
+  </view>
+  <view class='person_item'>
+    <view class='like_warp'  style='{{like.active}}'bindtap="bindCollect">
+      <image src="{{like.src}}" class='like_png'></image>
+      <view class='like_title'>收藏</view>
+    </view>
+    <view class='record_warp' style='{{record.active}}' bindtap="bindRecord">
+      <image src="{{record.src}}" class='record_png'></image>
+      <view class='record_title'>浏览记录</view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" style="height:{{scrpllHeight}};" class='scroll_box'>
+    <view class='top_space'></view>
+    <block wx:for="{{likeData}}" wx:key="index" >
+      <template is="moviesCardTemplate" data="{{item}}" wx:if="{item}"/>
+    </block>
+    <view class='collect_tishi' hidden='{{likeData[0]}}'>{{collect_tishi}}</view>
+    <image src="http://static.kaiyanapp.com/eyepetizer-web/assets/images/detail/bottom_logo@3x.556cae6b.png" class='end'></image>
+    <view class='bottom_space'></view>
+  </scroll-view>
+</view>
+

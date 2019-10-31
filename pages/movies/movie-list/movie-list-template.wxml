@@ -1,0 +1,15 @@
+<import src="../movie/movie-template.wxml"/>
+<import src="../moviesCard/moviesCard-template.wxml"/>
+<template name="movieListTemplate">
+  <view class="movie-list-container" wx:if="{{movies.first[0].movieType}}">
+    <view class="movie-head">
+      <view catchtap='onMoreTap' class='slogan' data-category="{{movies.first[0].typeName}}">{{movies.first[0].typeName}}<image class='more-img' src="/images/icon/more.png" ></image></view>
+    </view>
+    <view class='movies-container'>
+        <template is="movieTemplate" data="{{movies}}"/>
+        <block wx:for="{{movies.data}}" wx:key="index"> 
+        <template is="moviesCardTemplate" data="{{item}}"/>
+        </block>
+    </view>
+  </view>
+</template>
